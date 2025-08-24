@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Enter Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="EnterController" id="Y6W-OH-hqX" customClass="EnterController" customModule="VMIGrent" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="enter_bg" translatesAutoresizingMaskIntoConstraints="NO" id="G5i-8B-1qu">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch_logo" translatesAutoresizingMaskIntoConstraints="NO" id="8tY-9n-hp6">
+                                <rect key="frame" x="109" y="80" width="196" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="196" id="YTO-Um-QSk"/>
+                                    <constraint firstAttribute="height" constant="72" id="hmA-1Z-FPY"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="XVK-bg-BxA">
+                                <rect key="frame" x="16" y="746" width="382" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dvt-E2-dmM" customClass="CommonButton" customModule="VMIGrent" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="sfB-1f-eXx"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="enter_main_button_title"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="background">
+                                                <integer key="value" value="0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="registerPressed" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ng7-Eb-0eV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TaA-zo-y4b" customClass="CommonButton" customModule="VMIGrent" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="52" width="382" height="48"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="enter_support_button_title"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="background">
+                                                <integer key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="authPressed" destination="Y6W-OH-hqX" eventType="touchUpInside" id="CdW-JB-zRR"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0sv-rz-k4I">
+                                <rect key="frame" x="16" y="60" width="24" height="24"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="back_arrow"/>
+                                <connections>
+                                    <action selector="backPressed" destination="Y6W-OH-hqX" eventType="touchUpInside" id="F9q-jn-DiX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="G5i-8B-1qu" secondAttribute="bottom" id="3CE-67-izQ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="XVK-bg-BxA" secondAttribute="bottom" constant="16" id="3iR-Zd-eEl"/>
+                            <constraint firstItem="8tY-9n-hp6" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="36" id="A8b-wh-J4N"/>
+                            <constraint firstItem="0sv-rz-k4I" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="16" id="DNk-5o-7Rj"/>
+                            <constraint firstItem="G5i-8B-1qu" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="LgZ-iT-FYN"/>
+                            <constraint firstItem="0sv-rz-k4I" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="Rg4-ng-0cm"/>
+                            <constraint firstItem="XVK-bg-BxA" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="afc-JN-Xa6"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="XVK-bg-BxA" secondAttribute="trailing" constant="16" id="fGc-vK-jYj"/>
+                            <constraint firstItem="8tY-9n-hp6" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="h03-Yp-MkQ"/>
+                            <constraint firstItem="G5i-8B-1qu" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="kyg-7O-mgA"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="G5i-8B-1qu" secondAttribute="trailing" id="pEQ-jK-Ogq"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ems-A5-OEs"/>
+                    <connections>
+                        <outlet property="backButton" destination="0sv-rz-k4I" id="eW0-D4-DV1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="back_arrow" width="24" height="24"/>
+        <image name="enter_bg" width="375" height="646"/>
+        <image name="launch_logo" width="196.5" height="72"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

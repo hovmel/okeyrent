@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Info Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="InfoController" customModule="VMIGrent" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k6P-YJ-5Nx" customClass="CommonButton" customModule="VMIGrent" customModuleProvider="target">
+                                <rect key="frame" x="16" y="798" width="382" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="Bv6-0V-ip0"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="background">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="titleColor">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="actionPressed" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ccF-k3-zIp"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="xvX-r8-31P">
+                                <rect key="frame" x="35" y="339" width="344" height="228"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VGV-dH-JEr">
+                                        <rect key="frame" x="94" y="0.0" width="156" height="156"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="156" id="9rf-JA-P7r"/>
+                                            <constraint firstAttribute="width" constant="156" id="fCi-Vu-0OI"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="uT0-lR-E0P">
+                                        <rect key="frame" x="0.0" y="172" width="344" height="56"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UkE-xp-TMV" customClass="CommonLabel" customModule="VMIGrent" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="344" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                                        <integer key="value" value="32"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isMediumFont" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="color">
+                                                        <integer key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t6U-3G-Beu" customClass="CommonLabel" customModule="VMIGrent" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="35.5" width="344" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                                        <integer key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="color">
+                                                        <integer key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="uT0-lR-E0P" secondAttribute="trailing" id="1o9-sE-cIb"/>
+                                    <constraint firstItem="uT0-lR-E0P" firstAttribute="leading" secondItem="xvX-r8-31P" secondAttribute="leading" id="dWq-pU-wwc"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xvX-r8-31P" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="35" id="9qD-JW-yCq"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="k6P-YJ-5Nx" secondAttribute="bottom" constant="16" id="D5o-ha-dnW"/>
+                            <constraint firstItem="k6P-YJ-5Nx" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="Ezi-nI-cFI"/>
+                            <constraint firstItem="xvX-r8-31P" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="Xrg-93-9wq"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="k6P-YJ-5Nx" secondAttribute="trailing" constant="16" id="ehm-f7-nc2"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="xvX-r8-31P" secondAttribute="trailing" constant="35" id="jJu-fk-zvF"/>
+                            <constraint firstItem="xvX-r8-31P" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="qzc-EM-GtD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="actionButton" destination="k6P-YJ-5Nx" id="OjA-9d-GyK"/>
+                        <outlet property="descrLabel" destination="t6U-3G-Beu" id="pyJ-qR-lDL"/>
+                        <outlet property="imageView" destination="VGV-dH-JEr" id="0Jn-Pq-khc"/>
+                        <outlet property="titleLabel" destination="UkE-xp-TMV" id="BY4-Zl-WHc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-199" y="136"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

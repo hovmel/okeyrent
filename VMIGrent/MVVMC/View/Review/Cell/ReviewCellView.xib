@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ReviewCellView" customModule="VMIGrent" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="geo-5h-1eu">
+                    <rect key="frame" x="24" y="16" width="366" height="864"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Расскажите, как прошло ваше бронирование" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OvM-KS-4Ru" customClass="CommonLabel" customModule="VMIGrent" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="366" height="145"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                    <integer key="value" value="16"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="isMediumFont" value="YES"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="color">
+                                    <integer key="value" value="2"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R4Q-q1-16W" customClass="ReviewMarkView" customModule="VMIGrent" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="169" width="366" height="68"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="68" id="Qq3-Sb-NhW"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Huo-OH-XJR" customClass="ReviewMarkView" customModule="VMIGrent" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="261" width="366" height="68"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="68" id="Era-tN-q8P"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0mw-wd-4c1" customClass="ReviewMarkView" customModule="VMIGrent" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="353" width="366" height="68"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="68" id="ct0-F0-XPe"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H5Q-t6-TVg" customClass="ReviewMarkView" customModule="VMIGrent" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="445" width="366" height="68"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="68" id="UXC-x0-PQ1"/>
+                            </constraints>
+                        </view>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dYt-z2-s90">
+                            <rect key="frame" x="0.0" y="537" width="366" height="327"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="327" id="qbZ-cy-MS9"/>
+                            </constraints>
+                            <color key="textColor" systemColor="labelColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="geo-5h-1eu" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="16" id="Ipk-1o-Ums"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="geo-5h-1eu" secondAttribute="trailing" constant="24" id="POM-Xy-lGA"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="geo-5h-1eu" secondAttribute="bottom" constant="16" id="VPx-Yv-Y5E"/>
+                <constraint firstItem="geo-5h-1eu" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="24" id="vck-Np-Y5u"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="commentTextView" destination="dYt-z2-s90" id="feX-9e-3Cg"/>
+                <outletCollection property="reviewMarkView" destination="R4Q-q1-16W" collectionClass="NSMutableArray" id="qLE-rd-s7j"/>
+                <outletCollection property="reviewMarkView" destination="Huo-OH-XJR" collectionClass="NSMutableArray" id="fab-VU-Dqz"/>
+                <outletCollection property="reviewMarkView" destination="0mw-wd-4c1" collectionClass="NSMutableArray" id="QgL-vR-osU"/>
+                <outletCollection property="reviewMarkView" destination="H5Q-t6-TVg" collectionClass="NSMutableArray" id="rWj-hI-Vnd"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="94"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

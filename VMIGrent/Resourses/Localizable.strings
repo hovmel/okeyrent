@@ -1,0 +1,25 @@
+ /* 
+  Localizable.strings
+  VMIGrent
+
+  Created by Mikhail Koroteev on 27.05.2022.
+  
+*/
+
+"enter_main_button_title" = "Зарегистрироваться";
+"enter_support_button_title" = "Войти";
+
+"register_1_title" = "Регистрация";
+"register_1_button_title" = "Получить код";
+"register_1_agreement" = "Продолжая, вы даете согласие на обработку персональных данных и принимаете условия пользовательского соглашения";
+"register_1_agreement_link" = "пользовательского соглашения";
+"register_1_field_name" = "Имя";
+"register_1_field_secondName" = "Фамилия";
+"register_1_field_phone" = "Номер телефона";
+"register_error" = "Заполните все поля";
+"sms_error" = "Не удалось отправить код SMS";
+"code_title_enter" = "Вход";
+"code_title_register" = "Регистрация";
+"code_title_phone" = "Изменить номер телефона";
+"code_resend_code" = "Отправить код повторно";
+"code_resend_code_timer" = "Отправить код повторно (0:%@)";

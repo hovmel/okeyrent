@@ -1,0 +1,29 @@
+//
+//  BookingListResponse.swift
+//  VMIGrent
+//
+//  Created by Mikhail Koroteev on 11.07.2022.
+//
+
+import Foundation
+
+class BookingListResponse: BaseResponse {
+    
+    var items: [BookingModel]?
+    var meta: MetaModel?
+    
+    private enum CodingKeys: String, CodingKey {
+        case items = "items"
+        case meta = "meta"
+    }
+    
+    required init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        items = try container.decodeIfPresent(.items)
+        meta = try container.decodeIfPresent(.meta)
+        
+        try super.init(from: decoder)
+    }
+
+    
+}

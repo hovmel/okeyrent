@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ObjectListCell" customModule="VMIGrent" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="247" height="494"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mHJ-fL-sCC">
+                    <rect key="frame" x="16" y="8" width="215" height="482"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jru-8g-mzL" customClass="GalleryView" customModule="VMIGrent" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="215" height="134"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="jru-8g-mzL" secondAttribute="height" multiplier="343:214" id="AKD-0J-fx5"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3If-vt-hEb" customClass="FavoriteButton" customModule="VMIGrent" customModuleProvider="target">
+                            <rect key="frame" x="175" y="16" width="24" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="24" id="ErR-vc-yyS"/>
+                                <constraint firstAttribute="width" constant="24" id="nXB-3G-mgt"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <connections>
+                                <action selector="favoritePressed" destination="iN0-l3-epB" eventType="touchUpInside" id="xSF-bG-CvE"/>
+                            </connections>
+                        </button>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="PVJ-aT-8MU">
+                            <rect key="frame" x="16" y="142" width="183" height="324"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="EAl-da-sGe">
+                                    <rect key="frame" x="0.0" y="0.0" width="183" height="288.66666666666669"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="3dO-52-AMI">
+                                            <rect key="frame" x="0.0" y="0.0" width="183" height="261.66666666666669"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qfR-cR-Ym2">
+                                                    <rect key="frame" x="0.0" y="0.0" width="183" height="24"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ui3-PK-Bkt" customClass="CommonLabel" customModule="VMIGrent" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="138" height="24"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                                                    <integer key="value" value="18"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isMediumFont" value="YES"/>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="color">
+                                                                    <integer key="value" value="2"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </label>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vr9-6k-9JI" customClass="RateView" customModule="VMIGrent" customModuleProvider="target">
+                                                            <rect key="frame" x="138" y="0.0" width="45" height="24"/>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="45" id="Lft-E4-Tgv"/>
+                                                                <constraint firstAttribute="height" constant="24" id="Oo2-Ls-ZSY"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vCG-y3-tQP" customClass="CommonLabel" customModule="VMIGrent" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="31.999999999999986" width="41.333333333333336" height="229.66666666666663"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="color">
+                                                            <integer key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                                            <integer key="value" value="12"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="qfR-cR-Ym2" secondAttribute="trailing" id="PKJ-lR-jcA"/>
+                                                <constraint firstItem="qfR-cR-Ym2" firstAttribute="leading" secondItem="3dO-52-AMI" secondAttribute="leading" id="n3t-X2-Rk5"/>
+                                            </constraints>
+                                        </stackView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ufb-Ub-PP5" customClass="ObjectPropertyView" customModule="VMIGrent" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="271.66666666666669" width="183" height="17"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="17" id="wyl-1H-UyY"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="3dO-52-AMI" secondAttribute="trailing" id="ZZA-Zj-CxC"/>
+                                        <constraint firstItem="3dO-52-AMI" firstAttribute="leading" secondItem="EAl-da-sGe" secondAttribute="leading" id="zz6-bk-rlx"/>
+                                    </constraints>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aPg-gr-HTu">
+                                    <rect key="frame" x="0.0" y="303.66666666666669" width="82.666666666666671" height="20.333333333333314"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sRv-tO-og9" customClass="CommonLabel" customModule="VMIGrent" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="41.333333333333336" height="20.333333333333332"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isMediumFont" value="YES"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                                    <integer key="value" value="20"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="color">
+                                                    <integer key="value" value="2"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cWD-Cv-5Cy" customClass="CommonLabel" customModule="VMIGrent" customModuleProvider="target">
+                                            <rect key="frame" x="41.333333333333329" y="0.0" width="41.333333333333329" height="20.333333333333332"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                                    <integer key="value" value="16"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isMediumFont" value="YES"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="color">
+                                                    <integer key="value" value="11"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="EAl-da-sGe" secondAttribute="trailing" id="3aF-hq-xes"/>
+                                <constraint firstItem="EAl-da-sGe" firstAttribute="leading" secondItem="PVJ-aT-8MU" secondAttribute="leading" id="Dp5-lQ-l1A"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="PVJ-aT-8MU" firstAttribute="leading" secondItem="mHJ-fL-sCC" secondAttribute="leading" constant="16" id="J9K-S7-mbE"/>
+                        <constraint firstItem="jru-8g-mzL" firstAttribute="top" secondItem="mHJ-fL-sCC" secondAttribute="top" id="Ugf-7F-8hH"/>
+                        <constraint firstAttribute="trailing" secondItem="3If-vt-hEb" secondAttribute="trailing" constant="16" id="c28-f0-5ZJ"/>
+                        <constraint firstAttribute="trailing" secondItem="PVJ-aT-8MU" secondAttribute="trailing" constant="16" id="dJh-jH-c3v"/>
+                        <constraint firstItem="3If-vt-hEb" firstAttribute="top" secondItem="mHJ-fL-sCC" secondAttribute="top" constant="16" id="oJ3-sE-a2a"/>
+                        <constraint firstAttribute="trailing" secondItem="jru-8g-mzL" secondAttribute="trailing" id="rpN-1h-UG0"/>
+                        <constraint firstItem="jru-8g-mzL" firstAttribute="leading" secondItem="mHJ-fL-sCC" secondAttribute="leading" id="sXi-sL-hZD"/>
+                        <constraint firstItem="PVJ-aT-8MU" firstAttribute="top" secondItem="jru-8g-mzL" secondAttribute="bottom" constant="8" id="v69-C1-VrO"/>
+                        <constraint firstAttribute="bottom" secondItem="PVJ-aT-8MU" secondAttribute="bottom" constant="16" id="xPS-0K-SEi"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="mHJ-fL-sCC" secondAttribute="trailing" constant="16" id="LlP-MT-Ws4"/>
+                <constraint firstItem="mHJ-fL-sCC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="bnz-ZX-eTS"/>
+                <constraint firstAttribute="bottom" secondItem="mHJ-fL-sCC" secondAttribute="bottom" constant="4" id="gER-w3-6hu"/>
+                <constraint firstItem="mHJ-fL-sCC" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="jl3-c8-Hcb"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="addressLabel" destination="vCG-y3-tQP" id="bZp-oE-NDa"/>
+                <outlet property="bgView" destination="mHJ-fL-sCC" id="bEt-Lm-efm"/>
+                <outlet property="favotiteButton" destination="3If-vt-hEb" id="Gs5-Uq-lEs"/>
+                <outlet property="galleryView" destination="jru-8g-mzL" id="vDN-pz-Zo6"/>
+                <outlet property="objectPropertyView" destination="ufb-Ub-PP5" id="rvx-f7-h5e"/>
+                <outlet property="priceLabel" destination="sRv-tO-og9" id="Nwq-cZ-4Ge"/>
+                <outlet property="rateView" destination="vr9-6k-9JI" id="3HF-qI-blL"/>
+                <outlet property="titleLabel" destination="Ui3-PK-Bkt" id="uvD-Tl-jeo"/>
+                <outlet property="typePriceLabel" destination="cWD-Cv-5Cy" id="0V0-bI-3eL"/>
+            </connections>
+            <point key="canvasLocation" x="16.666666666666668" y="292.66304347826087"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

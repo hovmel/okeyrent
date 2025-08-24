@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TimeController" customModule="VMIGrent" customModuleProvider="target">
+            <connections>
+                <outlet property="bgView" destination="e2w-YC-R1p" id="fen-Tv-dja"/>
+                <outlet property="bottomConstr" destination="x5N-lk-Dtj" id="yta-VW-QCZ"/>
+                <outlet property="continueButton" destination="cx8-BQ-5LT" id="r2m-3H-64A"/>
+                <outlet property="datePicker" destination="KIJ-iK-TKG" id="fVV-fE-8fn"/>
+                <outlet property="titleLabel" destination="8sd-aX-Hbt" id="HAB-gc-5WJ"/>
+                <outlet property="view" destination="iN0-l3-epB" id="75B-sV-NCR"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e2w-YC-R1p">
+                    <rect key="frame" x="0.0" y="498" width="414" height="364"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8sd-aX-Hbt" customClass="CommonLabel" customModule="VMIGrent" customModuleProvider="target">
+                            <rect key="frame" x="24" y="16" width="41.5" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                    <integer key="value" value="24"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="isMediumFont" value="YES"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="color">
+                                    <integer key="value" value="2"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HOm-c5-wLM">
+                            <rect key="frame" x="374" y="21" width="24" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="24" id="5Rs-1q-nmb"/>
+                                <constraint firstAttribute="height" constant="24" id="znF-AG-yP3"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="close"/>
+                            <connections>
+                                <action selector="closePressed" destination="-1" eventType="touchUpInside" id="s3A-OX-Dis"/>
+                            </connections>
+                        </button>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="12G-MG-FFD">
+                            <rect key="frame" x="24" y="300" width="374" height="48"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cx8-BQ-5LT" customClass="VmigButton" customModule="VMIGrent" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="48"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Продолжить"/>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="48" id="3oX-ja-D58"/>
+                            </constraints>
+                        </stackView>
+                        <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="KIJ-iK-TKG">
+                            <rect key="frame" x="0.0" y="45" width="414" height="255"/>
+                            <locale key="locale" localeIdentifier="ru"/>
+                        </datePicker>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="KIJ-iK-TKG" firstAttribute="top" secondItem="HOm-c5-wLM" secondAttribute="bottom" id="7AY-HG-iZn"/>
+                        <constraint firstItem="HOm-c5-wLM" firstAttribute="top" secondItem="e2w-YC-R1p" secondAttribute="top" constant="21" id="9vY-sO-kVL"/>
+                        <constraint firstItem="8sd-aX-Hbt" firstAttribute="top" secondItem="e2w-YC-R1p" secondAttribute="top" constant="16" id="LGQ-6T-shE"/>
+                        <constraint firstAttribute="trailing" secondItem="12G-MG-FFD" secondAttribute="trailing" constant="16" id="Ndl-jj-cgX"/>
+                        <constraint firstAttribute="trailing" secondItem="HOm-c5-wLM" secondAttribute="trailing" constant="16" id="a1F-lz-O1G"/>
+                        <constraint firstItem="KIJ-iK-TKG" firstAttribute="leading" secondItem="e2w-YC-R1p" secondAttribute="leading" id="aka-MI-v3U"/>
+                        <constraint firstAttribute="trailing" secondItem="KIJ-iK-TKG" secondAttribute="trailing" id="d3E-fu-FkY"/>
+                        <constraint firstItem="12G-MG-FFD" firstAttribute="top" secondItem="KIJ-iK-TKG" secondAttribute="bottom" id="gkV-gf-DEW"/>
+                        <constraint firstAttribute="bottom" secondItem="12G-MG-FFD" secondAttribute="bottom" constant="16" id="lL5-fb-4d7"/>
+                        <constraint firstItem="8sd-aX-Hbt" firstAttribute="leading" secondItem="e2w-YC-R1p" secondAttribute="leading" constant="24" id="mry-lV-aK9"/>
+                        <constraint firstItem="12G-MG-FFD" firstAttribute="leading" secondItem="e2w-YC-R1p" secondAttribute="leading" constant="24" id="tEn-1U-eIe"/>
+                        <constraint firstAttribute="height" constant="364" id="wlr-dD-ZhV"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZhZ-i4-AAm">
+                    <rect key="frame" x="0.0" y="862" width="414" height="40"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="H5v-e7-Swy"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="ZhZ-i4-AAm" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="1Kg-7M-EYu"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="e2w-YC-R1p" secondAttribute="trailing" id="g8D-Sv-JFL"/>
+                <constraint firstAttribute="trailing" secondItem="ZhZ-i4-AAm" secondAttribute="trailing" id="tcy-4U-sMR"/>
+                <constraint firstItem="e2w-YC-R1p" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="uaU-SP-oS7"/>
+                <constraint firstItem="ZhZ-i4-AAm" firstAttribute="top" secondItem="e2w-YC-R1p" secondAttribute="bottom" id="uap-KV-sW4"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="e2w-YC-R1p" secondAttribute="bottom" id="x5N-lk-Dtj"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="152.67857142857142"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="close" width="24" height="24"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

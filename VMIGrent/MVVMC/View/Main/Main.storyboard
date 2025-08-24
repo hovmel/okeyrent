@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="MainController" customModule="VMIGrent" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ei6-zS-5WK">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <connections>
+                                    <segue destination="DXc-VK-Kv0" kind="embed" id="GHA-Hv-dSX"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tCO-hQ-Aa5">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <connections>
+                                    <segue destination="g3d-h6-DMm" kind="embed" id="7zl-5z-zFL"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="epS-nk-9gc">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <connections>
+                                    <segue destination="0JA-yp-oLb" kind="embed" id="0DW-8e-AhC"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OzW-6F-OQP">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <connections>
+                                    <segue destination="Yrh-1C-6F4" kind="embed" id="Ltw-Dg-zAM"/>
+                                </connections>
+                            </containerView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="ann-HE-1HA">
+                                <rect key="frame" x="8" y="792" width="398" height="62"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hJ2-ic-sP9" customClass="MenuView" customModule="VMIGrent" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="398" height="62"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="62" id="1yV-fm-VzP"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="hJ2-ic-sP9" secondAttribute="trailing" id="6KL-MM-YMU"/>
+                                    <constraint firstItem="hJ2-ic-sP9" firstAttribute="leading" secondItem="ann-HE-1HA" secondAttribute="leading" id="9AE-lf-cip"/>
+                                    <constraint firstItem="hJ2-ic-sP9" firstAttribute="top" secondItem="ann-HE-1HA" secondAttribute="top" id="9I7-de-Yjv"/>
+                                    <constraint firstAttribute="bottom" secondItem="hJ2-ic-sP9" secondAttribute="bottom" id="QpR-mr-80j"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tCO-hQ-Aa5" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="2Jm-i8-uWS"/>
+                            <constraint firstAttribute="bottom" secondItem="OzW-6F-OQP" secondAttribute="bottom" id="6TG-Vn-074"/>
+                            <constraint firstItem="tCO-hQ-Aa5" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="8Q4-iK-WUc"/>
+                            <constraint firstItem="epS-nk-9gc" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="DYH-Y3-LkN"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ann-HE-1HA" secondAttribute="trailing" constant="8" id="S0H-Gh-nX7"/>
+                            <constraint firstAttribute="bottom" secondItem="tCO-hQ-Aa5" secondAttribute="bottom" id="VKA-Rd-9VM"/>
+                            <constraint firstItem="epS-nk-9gc" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="Ykt-wl-Iqf"/>
+                            <constraint firstItem="tCO-hQ-Aa5" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="ZHi-XS-k85"/>
+                            <constraint firstItem="ei6-zS-5WK" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="aWv-IE-2YC"/>
+                            <constraint firstItem="epS-nk-9gc" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="cpp-2n-AHa"/>
+                            <constraint firstItem="ei6-zS-5WK" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="hCt-jO-Gvy"/>
+                            <constraint firstAttribute="bottom" secondItem="epS-nk-9gc" secondAttribute="bottom" id="lgh-dU-kjb"/>
+                            <constraint firstAttribute="bottom" secondItem="ei6-zS-5WK" secondAttribute="bottom" id="lwe-9h-HtF"/>
+                            <constraint firstItem="OzW-6F-OQP" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="m52-MO-Q4s"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="ann-HE-1HA" secondAttribute="bottom" constant="8" id="mfX-sT-nBq"/>
+                            <constraint firstItem="ei6-zS-5WK" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="oTe-SD-OIb"/>
+                            <constraint firstItem="ann-HE-1HA" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="8" id="wm5-l7-HhR"/>
+                            <constraint firstItem="OzW-6F-OQP" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="xcf-Z6-ziJ"/>
+                            <constraint firstItem="OzW-6F-OQP" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="yKH-of-NKo"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="XuO-Cf-5AI"/>
+                    <connections>
+                        <outlet property="mainStackView" destination="ann-HE-1HA" id="9PJ-fn-u33"/>
+                        <outlet property="menuView" destination="hJ2-ic-sP9" id="aSt-Do-Nw3"/>
+                        <outletCollection property="containers" destination="ei6-zS-5WK" collectionClass="NSMutableArray" id="HRv-2N-8jk"/>
+                        <outletCollection property="containers" destination="tCO-hQ-Aa5" collectionClass="NSMutableArray" id="dy8-uO-3zO"/>
+                        <outletCollection property="containers" destination="epS-nk-9gc" collectionClass="NSMutableArray" id="v2M-OB-wMz"/>
+                        <outletCollection property="containers" destination="OzW-6F-OQP" collectionClass="NSMutableArray" id="kcT-tH-XoB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1018.840579710145" y="88.392857142857139"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="CBU-qy-X9z">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Profile" id="Yrh-1C-6F4" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bUR-g6-JtU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1565" y="95"/>
+        </scene>
+        <!--Cities-->
+        <scene sceneID="Etk-Sj-lfN">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Cities" id="DXc-VK-Kv0" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V5z-9S-0vP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1569" y="50"/>
+        </scene>
+        <!--Booking-->
+        <scene sceneID="6AX-Wx-fs2">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Booking" id="0JA-yp-oLb" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xai-81-YRw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1580" y="10"/>
+        </scene>
+        <!--Favorite-->
+        <scene sceneID="JSk-2P-o4y">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Favorite" id="g3d-h6-DMm" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nYH-8a-gge" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1596" y="134"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

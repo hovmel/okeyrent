@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegionsController" customModule="VMIGrent" customModuleProvider="target">
+            <connections>
+                <outlet property="loader" destination="Raq-ZP-jap" id="38C-0r-8QM"/>
+                <outlet property="searchField" destination="OXY-VJ-KSi" id="Cd5-17-QZS"/>
+                <outlet property="tableView" destination="vzi-g2-ACd" id="VYC-PG-Nn2"/>
+                <outlet property="view" destination="iN0-l3-epB" id="5gg-87-DV4"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выбрать регион" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VO9-Xk-6A5" customClass="CommonLabel" customModule="VMIGrent" customModuleProvider="target">
+                    <rect key="frame" x="16" y="60" width="129.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                            <integer key="value" value="24"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isMediumFont" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="color">
+                            <integer key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="vzi-g2-ACd">
+                    <rect key="frame" x="0.0" y="169" width="414" height="677"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="CcH-XA-1q4"/>
+                        <outlet property="delegate" destination="-1" id="Jxc-EU-KgM"/>
+                    </connections>
+                </tableView>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Поиск" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OXY-VJ-KSi" customClass="CommonField" customModule="VMIGrent" customModuleProvider="target">
+                    <rect key="frame" x="16" y="97" width="382" height="56"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="56" id="lnF-yp-cGi"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Raq-ZP-jap">
+                    <rect key="frame" x="197" y="438" width="20" height="20"/>
+                    <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </activityIndicatorView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="VO9-Xk-6A5" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="1I9-AX-vcA"/>
+                <constraint firstItem="Raq-ZP-jap" firstAttribute="centerX" secondItem="vzi-g2-ACd" secondAttribute="centerX" id="BhF-CG-HfN"/>
+                <constraint firstItem="vzi-g2-ACd" firstAttribute="top" secondItem="OXY-VJ-KSi" secondAttribute="bottom" constant="16" id="NrT-19-ptm"/>
+                <constraint firstItem="OXY-VJ-KSi" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="Thx-5w-UWr"/>
+                <constraint firstItem="Raq-ZP-jap" firstAttribute="centerY" secondItem="vzi-g2-ACd" secondAttribute="centerY" id="fIA-Wz-chD"/>
+                <constraint firstItem="VO9-Xk-6A5" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="16" id="g7g-qe-k4v"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="vzi-g2-ACd" secondAttribute="trailing" id="hu1-bi-zQh"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="vzi-g2-ACd" secondAttribute="bottom" constant="16" id="mt9-Ux-osF"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="OXY-VJ-KSi" secondAttribute="trailing" constant="16" id="prT-48-Fw4"/>
+                <constraint firstItem="OXY-VJ-KSi" firstAttribute="top" secondItem="VO9-Xk-6A5" secondAttribute="bottom" constant="16" id="xpr-bo-Uah"/>
+                <constraint firstItem="vzi-g2-ACd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="yTs-2L-Qt2"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="118.52678571428571"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
