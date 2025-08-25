@@ -9,7 +9,9 @@ import Foundation
 import RxSwift
 import Moya
 
-let moyaPlugins: [PluginType] = [NetworkLoggerPlugin(verbose: true, cURL: true)]
+//FIXME: - 
+//let moyaPlugins: [PluginType] = [NetworkLoggerPlugin(verbose: true, cURL: true)]
+let moyaPlugins: [PluginType] = [NetworkLoggerPlugin()]
 
 final class RegisterViewModel {
     

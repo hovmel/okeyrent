@@ -6,20 +6,21 @@
 //
 
 import Foundation
+import CoreLocation
 
 class BluetoorhManager: NSObject {
     
     let locationManager = CLLocationManager()
     var location: CLLocationCoordinate2D?
     
-    static let shared = VRLocationManager()
+//    static let shared = VRLocationManager()
     
     private override init() {
         self.locationManager.requestAlwaysAuthorization()
         self.locationManager.requestWhenInUseAuthorization()
         super.init()
         if CLLocationManager.locationServicesEnabled() {
-            locationManager.delegate = self
+//            locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
             locationManager.startUpdatingLocation()
         }

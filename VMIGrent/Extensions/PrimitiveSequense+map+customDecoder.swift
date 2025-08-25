@@ -21,14 +21,14 @@ fileprivate let customDecoder: JSONDecoder = {
     return decoder
 }()
 
-extension PrimitiveSequence where TraitType == SingleTrait, ElementType == Response {
-    
-    public func mapWithCustomDecoder<D: Decodable>(_ type: D.Type) -> Single<D> {
-        return map(type, atKeyPath: nil, using: customDecoder, failsOnEmptyData: true)
-    }
-    
-    public func decode<D: Decodable>(_ type: D.Type) -> Observable<D> {
-        return map(type, atKeyPath: nil, using: customDecoder, failsOnEmptyData: true).asObservable()
-    }
-    
-}
+//extension PrimitiveSequence where TraitType == SingleTrait, ElementType == Response {
+//    
+//    public func mapWithCustomDecoder<D: Decodable>(_ type: D.Type) -> Single<D> {
+//        return map(type, atKeyPath: nil, using: customDecoder, failsOnEmptyData: true)
+//    }
+//    
+//    public func decode<D: Decodable>(_ type: D.Type) -> Observable<D> {
+//        return map(type, atKeyPath: nil, using: customDecoder, failsOnEmptyData: true).asObservable()
+//    }
+//    
+//}

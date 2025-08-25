@@ -38,3 +38,22 @@ class RegisterService {
     }
 
 }
+
+
+import Moya
+import RxSwift
+
+extension PrimitiveSequence where Trait == SingleTrait, Element == Response {
+    func decode<T: Decodable>(_ type: T.Type,
+                              decoder: JSONDecoder = JSONDecoder()) -> Observable<T> {
+        return flatMap { response -> Single<T> in
+            do {
+                let object = try decoder.decode(T.self, from: response.data)
+                return .just(object)
+            } catch {
+                return .error(error)
+            }
+        }
+        .asObservable()
+    }
+}

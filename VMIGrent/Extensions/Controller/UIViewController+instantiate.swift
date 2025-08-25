@@ -157,19 +157,21 @@ extension UIViewController {
         let calendarController = CalendarController()
 //        moneyController.modalPresentationStyle = .
         calendarController.loadViewIfNeeded()
+        
+        //FIXME: -
         if let startDate = startDate {
-            calendarController.startDay = Day(month: Month(era: startDate.get(.era),
-                                                           year: startDate.get(.year),
-                                                           month: startDate.get(.month),
-                                                           isInGregorianCalendar: true),
-                                              day: startDate.get(.day))
+//            calendarController.startDay = Day(month: Month(era: startDate.get(.era),
+//                                                           year: startDate.get(.year),
+//                                                           month: startDate.get(.month),
+//                                                           isInGregorianCalendar: true),
+//                                              day: startDate.get(.day))
         }
         if let endDate = endDate {
-            calendarController.endDay = Day(month: Month(era: endDate.get(.era),
-                                                         year: endDate.get(.year),
-                                                         month: endDate.get(.month),
-                                                         isInGregorianCalendar: true),
-                                             day: endDate.get(.day))
+//            calendarController.endDay = Day(month: Month(era: endDate.get(.era),
+//                                                         year: endDate.get(.year),
+//                                                         month: endDate.get(.month),
+//                                                         isInGregorianCalendar: true),
+//                                             day: endDate.get(.day))
         }
         calendarController.action = action
         calendarController.clearButton.isHidden = !isClearButton

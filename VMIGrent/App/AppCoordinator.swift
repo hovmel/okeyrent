@@ -19,17 +19,17 @@ final class AppCoordinator: Coordinator {
     private let window: UIWindow
     
     func start() {
-//        if let _ = AuthManager.shared.getSessionToken() {
+        if let _ = AuthManager.shared.getSessionToken() {
             let sb = UIStoryboard(name: "Load", bundle: nil)
             let controller = sb.instantiateInitialViewController()
             window.rootViewController = controller
-//        } else {
-//            let navigationController = UINavigationController()
-//            let enterCoordinator = EnterCoordinator(navigationController: navigationController)
-//            enterCoordinator.start()
-//            childCoordinators.append(enterCoordinator)
-//            window.rootViewController = navigationController
-//        }
+        } else {
+            let navigationController = UINavigationController()
+            let enterCoordinator = EnterCoordinator(navigationController: navigationController)
+            enterCoordinator.start()
+            childCoordinators.append(enterCoordinator)
+            window.rootViewController = navigationController
+        }
         window.makeKeyAndVisible()
     }
     

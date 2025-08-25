@@ -19,7 +19,7 @@ struct DayLabel: CalendarItemViewRepresentable {
 
   /// Properties that will vary depending on the particular date being displayed.
   struct ViewModel: Equatable {
-    let day: Day
+    let day: DayComponents
   }
 
   static func makeView(

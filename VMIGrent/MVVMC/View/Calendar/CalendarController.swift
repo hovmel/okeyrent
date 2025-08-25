@@ -9,6 +9,8 @@ import Foundation
 import UIKit
 import HorizonCalendar
 
+typealias Day = DayComponents
+
 class CalendarController: UIViewController {
     
     @IBOutlet var calendarContainer: UIView!
@@ -141,8 +143,8 @@ class CalendarController: UIViewController {
                 invariantViewProperties.backgroundColor = Colors.DDDDDD
             }
             
-            return CalendarItemModel<DayLabel>(invariantViewProperties: invariantViewProperties,
-                                               viewModel: .init(day: day))
+            //            return CalendarItemModel<DayLabel>(invariantViewProperties: invariantViewProperties,
+            return CalendarItemModel<DayLabel>(invariantViewProperties: invariantViewProperties)
         }
         .interMonthSpacing(24)
         .verticalDayMargin(5)
